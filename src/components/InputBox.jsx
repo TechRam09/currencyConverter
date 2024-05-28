@@ -28,7 +28,9 @@ function InputBox({
                     className="outline-none w-full bg-transparent py-1.5"
                     type="number"
                     placeholder="Amount"
-                   // the value will be taken as string so converted into number
+                    disabled={amountDisable}
+                    value={amount}
+                    onChange={(e)=> onAmountChange && onAmountChange(Number(e.target.value))}// the value will be taken as string so converted into number
                 />
             </div>
             <div className="w-1/2 flex flex-wrap justify-end text-right">
