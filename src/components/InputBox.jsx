@@ -6,7 +6,14 @@ import React from 'react'
 function InputBox({
     label,
     className = "",
-   
+    amount,
+    onAmountChange,
+    onCurrencyChange,
+    amountDisable = false,
+    currencyDisable =false, 
+    currencyOptions =[],
+    selectCurrency= 'usd',
+    
 }) {
    
 
