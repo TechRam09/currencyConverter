@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React from 'react'
@@ -37,13 +38,18 @@ function InputBox({
                 <p className="text-black/40 mb-2 w-full">Currency Type</p>
                 <select
                     className="rounded-lg px-1 py-1 bg-gray-100 cursor-pointer outline-none"
+                    value={selectCurrency}
+                    disabled={currencyDisable}
+                    onChange={(e)=> onCurrencyChange && onCurrencyChange(e.target.value)}
                 >
-                    
-                    
-                        <option value="usd">
-                            usd
+                    {currencyOptions.map((currency) => (
+                         <option key={currency} value={currency}>
+                             {currency}
                         </option>
                 
+                    ))}
+                    
+                       
                 </select>
             </div>
         </div>
