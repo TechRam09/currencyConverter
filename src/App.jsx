@@ -5,6 +5,7 @@ import './App.css'
 
 function App() {
  
+  const [amount,setAmount] =useState(0)
 
   return (
     <>
