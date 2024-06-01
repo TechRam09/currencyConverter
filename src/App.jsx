@@ -22,7 +22,7 @@ function App() {
     setAmount(result)
   }
     
-    const convert = () => {
+        const convert = () => {
         setResult(amount * currencyInfo[to])
     }
 
@@ -48,7 +48,11 @@ function App() {
                         <div className="w-full mb-1">
                             <InputBox
                                 label="From"
-                       
+                                 amount={amount}
+                                currencyOptions={options}
+                                onCurrencyChange={(currency)=> setFrom(currency)}
+                                selectCurrency={from}
+                                onAmountChange={(amount)=> setAmount(amount)}
                             />
                         </div>
                         <div className="relative w-full h-0.5">
